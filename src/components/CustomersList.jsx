@@ -10,7 +10,8 @@ export const CustomersList = ({ customers, urlPath }) => {
                     customers.map(c =>
                         <CustomersListItem
                             key={c.dni}
-                            customers={c.name}
+                            name={c.name}
+                            dni={c.dni}
                             editActions={'Editar'}
                             delActions={'Eliminar'}
                             urlPath={urlPath}>
