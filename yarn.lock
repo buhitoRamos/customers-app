@@ -4321,6 +4321,13 @@ flatted@^3.1.0:
   resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
   integrity sha1-dshYT0/IQ9tkcCpr0Eq3qL1mbaM=
 
+flux-standard-action@^0.6.1:
+  version "0.6.1"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/flux-standard-action/-/flux-standard-action-0.6.1.tgz#6f34211b94834ea1c3cc30f4e7afad3d0fbf71a2"
+  integrity sha1-bzQhG5SDTqHDzDD056+tPQ+/caI=
+  dependencies:
+    lodash.isplainobject "^3.2.0"
+
 follow-redirects@^1.0.0:
   version "1.15.1"
   resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/follow-redirects/-/follow-redirects-1.15.1.tgz#0ca6a452306c9b276e4d3127483e29575e207ad5"
@@ -5828,10 +5835,42 @@ lodash-es@^4.17.4, lodash-es@^4.2.0, lodash-es@^4.2.1:
   resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
   integrity sha1-Q+YmxG5lkbd1C+srUBFzkMYJ4+4=
 
+lodash._basefor@^3.0.0:
+  version "3.0.3"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash._basefor/-/lodash._basefor-3.0.3.tgz#7550b4e9218ef09fad24343b612021c79b4c20c2"
+  integrity sha1-dVC06SGO8J+tJDQ7YSAhx5tMIMI=
+
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
+lodash.isarguments@^3.0.0:
+  version "3.1.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a"
+  integrity sha1-L1c9hcaiQon/AGY7SRwdM4/zRYo=
+
+lodash.isarray@^3.0.0:
+  version "3.0.4"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
+  integrity sha1-eeTriMNqgSKvhvhEqpvNhRtfu1U=
+
+lodash.isplainobject@^3.2.0:
+  version "3.2.0"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz#9a8238ae16b200432960cd7346512d0123fbf4c5"
+  integrity sha1-moI4rhayAEMpYM1zRlEtASP79MU=
+  dependencies:
+    lodash._basefor "^3.0.0"
+    lodash.isarguments "^3.0.0"
+    lodash.keysin "^3.0.0"
+
+lodash.keysin@^3.0.0:
+  version "3.0.8"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/lodash.keysin/-/lodash.keysin-3.0.8.tgz#22c4493ebbedb1427962a54b445b2c8a767fb47f"
+  integrity sha1-IsRJPrvtsUJ5YqVLRFssinZ/tH8=
+  dependencies:
+    lodash.isarguments "^3.0.0"
+    lodash.isarray "^3.0.0"
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -7372,6 +7411,13 @@ redux-actions@2.2.1:
     lodash "^4.13.1"
     lodash-es "^4.17.4"
     reduce-reducers "^0.1.0"
+
+redux-promise@0.5.3:
+  version "0.5.3"
+  resolved "https://globaldevtools.bbva.com:443/artifactory/api/npm/npm-repo/redux-promise/-/redux-promise-0.5.3.tgz#e97e6c9d3bf376eacb79babe6d906da20112d6d8"
+  integrity sha1-6X5snTvzdurLebq+bZBtogES1tg=
+  dependencies:
+    flux-standard-action "^0.6.1"
 
 redux@3.7.2:
   version "3.7.2"
