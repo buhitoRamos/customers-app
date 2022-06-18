@@ -1,53 +1,44 @@
 import React, { Component } from 'react'
 import { AppFrame } from '../AppFrame'
-import { CustomersActions } from '../customersActions'
-import { CustomersList} from '../CustomersList'
-import {  withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { fetchCustomers } from '../../actions/fetchCustomers'
-import { getCustomers } from '../../selectors/customers'
+import PropTypes from "prop-types";
+import { getCustomerByDni } from '../../selectors/customers'
+import { CustomerEdit } from '../CustomerEdit'
+import { CustomerData } from '../CustomerData'
 
 
- class CustomerContainer extends Component  {
+class CustomerContainer extends Component {
 
-    componentDidMount() {
-        this.props.fetchCustomers();
-    }
 
-    handleAddNew = () => {
-        this.props.history.push('/customers/new');
-    }
-
-    renderBody = customers => (
-        <div>
-            <CustomersList
-                customers={customers}
-                urlPath={'customers/'}
-            ></CustomersList>
-            <CustomersActions>
-                <button onClick={this.handleAddNew}>Nuevo cliente</button>
-            </CustomersActions>
-        </div>
-    );
+    renderBody = () => (
+        <Route path="/customers/:dni/edit" children={
+            ({ match }) => {
+                const CustomerControl = match ? CustomerEdit : CustomerData;
+                 return   <CustomerControl {...this.props.customer} /> 
+            }
+        } />
+    )
 
     render() {
         return (
             <div>
                 <AppFrame
-                    header={'Listado de clientes'}
-                    body={this.renderBody(this.props.customers) }></AppFrame>
+                    header={`Cliente: ${this.props.dni}`}
+                    body={this.renderBody()}></AppFrame>
             </div>
         )
     }
 };
 
 CustomerContainer.defaultProps = {
-     customers: []
+    dni: PropTypes.string.isRequired,
+    customer: PropTypes.object.isRequired
 }
-
-const mapStateToProps = state => ({
-     customers: getCustomers(state)
+const mapStateToProps = (state, props) => ({
+    customer: getCustomerByDni(state, props)
 })
 
-export default withRouter(connect(mapStateToProps, {fetchCustomers})(CustomerContainer));
+
+export default withRouter(connect(mapStateToProps, null)(CustomerContainer));
 

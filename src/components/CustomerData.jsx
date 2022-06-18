@@ -1,7 +1,7 @@
 import React from "react";
 import  PropTypes  from "prop-types";
 
-export const CustomersData =  ( { name, dni, age } ) => {
+export const CustomerData =  ( { name, dni, age } ) => {
     return (
         <div>
             <div>
@@ -17,7 +17,7 @@ export const CustomersData =  ( { name, dni, age } ) => {
         </div>
     )
 }
-CustomersData.propTypes = {
+CustomerData.propTypes = {
     name: PropTypes.string.isRequired,
     dni: PropTypes.string.isRequired,
     age: PropTypes.number
