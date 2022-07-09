@@ -4,7 +4,7 @@ import { Route, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from "prop-types";
 import { getCustomerByDni } from '../../selectors/customers'
-import { CustomerEdit } from '../CustomerEdit'
+import  CustomerEdit from '../CustomerEdit'
 import { CustomerData } from '../CustomerData'
 
 
