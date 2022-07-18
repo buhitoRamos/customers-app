@@ -56,8 +56,7 @@ const MyField = ({input, meta, type, label, name}) => (
                     validate={isNumber} />
                     <CustomersActions>
                         <button type="submit" disabled={submitting}>Aceptar</button>
-                        <button onClick={onBack}>Cancelar</button>
-
+                        <button type="button" onClick={onBack}>Cancelar</button>
                     </CustomersActions>
             </form>
         </div>
